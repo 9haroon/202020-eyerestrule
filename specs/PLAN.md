@@ -25,9 +25,9 @@ The project aims to develop a client-side web application enforcing the 20-20-20
 
 *   **I. Backend-Mediated AI (No Client Secrets)**: Aligned. This feature does not involve AI or secrets.
 *   **II. Agreed Production Stack**: Next.js 16 (App Router) is aligned. However, the explicit requirement for "no backend api" and "local storage as a data storage" deviates from using `task-generator-app` for API and `Supabase` for database persistence. This is a deliberate simplification for this specific client-side utility and is detailed in "Complexity Tracking".
-*   **III. Security & Safe Content**: Aligned. User input for intervals is numeric, eliminating XSS risks. No `dangerouslySetInnerHTML` will be used. No AI JSON to validate, and no authentication model needed for this client-side-only utility.
-*   **IV. Type Safety & Code Hygiene**: Aligned. TypeScript will be used strictly. Code formatting will adhere to project standards (Prettier/ESLint). Styling will be build-time (e.g., Tailwind CSS or CSS Modules).
-*   **V. API Contracts & AI Governance**: Aligned. This feature has no backend APIs or AI interactions.
+*   **III. Security &amp; Safe Content**: Aligned. User input for intervals is numeric, eliminating XSS risks. No `dangerouslySetInnerHTML` will be used. No AI JSON to validate, and no authentication model needed for this client-side-only utility.
+*   **IV. Type Safety &amp; Code Hygiene**: Aligned. TypeScript will be used strictly. Code formatting will adhere to project standards (Prettier/ESLint). Styling will be build-time (e.g., Tailwind CSS or CSS Modules).
+*   **V. API Contracts &amp; AI Governance**: Aligned. This feature has no backend APIs or AI interactions.
 *   **VI. Spec Kit Path A**: Aligned for the development process using Spec Kit itself, not for the application's runtime.
 *   **VII. Constitution-Once UI**: Aligned. This principle applies to the Spec Kit UI, not the feature being developed.
 *   **VIII. Code Quality Standards**: Aligned. Will use ESLint and Prettier, integrate into CI.
@@ -115,7 +115,7 @@ The application will be a client-side web application built with **Next.js 16 an
     *   **`NotificationOverlay.tsx`**: A full-screen or prominent banner component that appears when a break is due. It will include the break countdown and a clear call to action to return to work.
     *   **`SettingsForm.tsx`**: A component within the settings page for inputting and saving custom work and break durations.
 
-3.  **State Management & Logic**:
+3.  **State Management &amp; Logic**:
     *   **`useTimer.ts` (Custom React Hook)**: This will be the central logic unit, encapsulating:
         *   Timer state (`isActive`, `isPaused`, `currentPhase`, `remainingTimeSeconds`).
         *   Functions for starting, pausing, resetting, and updating the timer.
@@ -184,9 +184,9 @@ interface UseTimerResult {
   timerState: TimerState; // Current state of the timer
   workIntervalMinutes: number; // Current configured work interval
   breakDurationSeconds: number; // Current configured break duration
-  startTimer: () => void;
-  pauseTimer: () => void;
-  resetTimer: () => void;
+  startTimer: () =&gt; void;
+  pauseTimer: () =&gt; void;
+  resetTimer: () =&gt; void;
 }
 ```
 The `SettingsForm` component will directly interact with the `localStorage` utility functions to save and load `TimerConfiguration`.
@@ -215,7 +215,7 @@ The `SettingsForm` component will directly interact with the `localStorage` util
 *   **Browser Backgrounding Issues**: `setInterval` accuracy can degrade when tabs are in the background or device sleeps. May need to rely on `Date.now()` and calculate elapsed time upon refocus/wake to maintain accuracy.
 *   **Notification Overwhelm**: Ensuring the audible/visual notifications are effective but not overly intrusive.
 
-### Phase 2: Customization and Persistence (User Stories 2 & 3 - P2, P3)
+### Phase 2: Customization and Persistence (User Stories 2 &amp; 3 - P2, P3)
 
 **Goal**: Allow users to configure work and break intervals and ensure these settings persist across sessions.
 
