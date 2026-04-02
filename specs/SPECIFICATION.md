@@ -5,7 +5,7 @@
 **Status**: Draft  
 **Input**: User description: "Build a web application to let people who utilizes a browser to strict with the eye rest rule (20-20-20 rule)"
 
-## User Scenarios & Testing *(mandatory)*
+## User Scenarios &amp; Testing *(mandatory)*
 
 ### User Story 1 - Core Timer Functionality (Priority: P1)
 

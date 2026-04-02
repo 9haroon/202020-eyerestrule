@@ -181,8 +181,12 @@ _json_field() {
 # Read file content only when the file exists AND has non-zero size.
 # Empty files (e.g. un-provisioned Supabase-synced placeholders) are skipped
 # so that Gemini receives "no context" rather than a blank section.
+# Returns 0 when missing/empty so ``set -e`` callers of VAR=$(_read_non_empty ...) do not abort.
 _read_non_empty() {
     local path="$1"
-    [[ -f "$path" && -s "$path" ]] && cat "$path"
+    if [[ -f "$path" && -s "$path" ]]; then
+        cat "$path" || return 1
+    fi
+    return 0
 }
 
