@@ -100,6 +100,9 @@ PLAN_CONTENT=$(_read_non_empty "$FEATURE_DIR/plan.md")
 CONSTITUTION=$(_read_non_empty "$REPO_ROOT/.specify/memory/constitution.md")
 TASKS_TEMPLATE=$(_read_non_empty "$REPO_ROOT/.specify/templates/tasks-template.md")
 
+# Optional refinement context (design references, acceptance criteria, UX notes)
+REFINEMENT=$(_read_non_empty "$REPO_ROOT/specs/REFINEMENT.md")
+
 # Optional artifacts
 RESEARCH=$(_read_non_empty "$FEATURE_DIR/research.md")
 DATA_MODEL=$(_read_non_empty "$FEATURE_DIR/data-model.md")
@@ -139,6 +142,12 @@ ${PLAN_CONTENT:-No plan found.}
 
 ---
 
+${REFINEMENT:+## Refinement (Design References & Acceptance Criteria)
+
+${REFINEMENT}
+
+---
+}
 ${RESEARCH:+## Research Notes
 
 ${RESEARCH}

@@ -63,7 +63,7 @@ description: "Task list template for feature implementation"
 
 ### Tests for User Story 1
 
-> **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
+&gt; **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
 - [ ] T013 [P] [US1] Unit test for `useTimer` hook covering core countdown, phase transitions, and control logic in `frontend/tests/unit/hooks/useTimer.test.ts`
 
@@ -117,7 +117,7 @@ description: "Task list template for feature implementation"
 
 ---
 
-## Phase 6: Polish & Cross-Cutting Concerns
+## Phase 6: Polish &amp; Cross-Cutting Concerns
 
 **Purpose**: Improvements that affect multiple user stories
 
@@ -129,7 +129,7 @@ description: "Task list template for feature implementation"
 
 ---
 
-## Dependencies & Execution Order
+## Dependencies &amp; Execution Order
 
 ### Phase Dependencies
 
