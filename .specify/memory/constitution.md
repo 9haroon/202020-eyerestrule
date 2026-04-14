@@ -2,7 +2,7 @@
 
 ## Code Quality
 
-Prioritise speed of delivery. Technical debt is acceptable at this stage — document shortcuts with TODO comments for future cleanup.
+Functions must be pure where possible. No commented-out code in commits. No `any` types in TypeScript. All code reviewed before merge.
 
 ## Testing Requirements
 
@@ -10,12 +10,12 @@ Prioritise speed of delivery. Technical debt is acceptable at this stage — doc
 
 ## Error Handling
 
-Basic error boundaries to prevent full-page crashes. Errors logged to console.
+User-facing errors must use plain language — never expose raw stack traces or internal IDs. All exceptions logged with full context (user_id, request_id, timestamp).
 
 ## Performance Constraints
 
-No performance constraints for this project.
+Core pages must load in under 2 seconds on a 4G connection. Largest Contentful Paint < 2.5s. No synchronous operations on the main thread.
 
 ## UX Consistency
 
-Functional first. Consistency can be refined once the concept is validated.
+Follow WCAG 2.1 AA accessibility standards. Consistent use of the design system — no one-off custom styles without design review. All interactive elements have visible focus states.
