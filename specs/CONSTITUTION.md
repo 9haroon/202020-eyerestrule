@@ -14,7 +14,7 @@ User-facing errors must use plain language — never expose raw stack traces or 
 
 ## Performance Constraints
 
-Core pages must load in under 2 seconds on a 4G connection. Largest Contentful Paint < 2.5s. No synchronous operations on the main thread.
+Core pages must load in under 2 seconds on a 4G connection. Largest Contentful Paint &lt; 2.5s. No synchronous operations on the main thread.
 
 ## UX Consistency
 
